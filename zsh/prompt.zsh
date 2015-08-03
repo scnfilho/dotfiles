@@ -14,12 +14,12 @@ git_branch() {
 }
 
 git_dirty() {
-  st=$($git status 2>/dev/null | tail -n 1)
-  if [[ $st == "" ]]
+  st=$($git status --porcelain 2>/dev/null)
+  if [[ $? -ne 0 ]]
   then
     echo ""
   else
-    if [[ "$st" =~ ^nothing ]]
+    if [[ $st == "" ]]
     then
       echo "[%{$fg[green]%}$(git_prompt_info)$(need_push)%{$reset_color%}]"
     else
