@@ -46,7 +46,7 @@ need_push () {
   then
     echo ""
   else
-    echo "%{$fg_bold[white]%}$unicode_arrow_up$count%{$reset_color%} "
+    echo "%{$fg_bold[white]%}$unicode_arrow_up$count%{$reset_color%}"
   fi
 }
 
@@ -70,7 +70,7 @@ directory_name() {
   echo "%{$fg_bold[green]%}%c%{$reset_color%}"
 }
 
-export PROMPT=$'$(directory_name)$(git_dirty)$(need_push)$ '
+export PROMPT=$'$(directory_name)$(git_dirty)$(need_push) $ '
 set_prompt () {
   export RPROMPT="%{$fg_bold[cyan]%}$(rb_prompt)%{$reset_color%}"
 }
