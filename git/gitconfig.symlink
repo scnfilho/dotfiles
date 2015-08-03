@@ -1,9 +1,6 @@
 [user]
-  name = Filipe Costa
-  email = filipebarcos@gmail.com
-
-[credential]
-  helper = /opt/boxen/bin/boxen-git-credential
+  name = Sergio Nogueira Filho
+  email = sergiocnf@gmail.com
 
 [web]
 	browser = open
@@ -27,8 +24,8 @@
   pager = true
 
 [color "status"]
-  added = yellow
-  changed = green
+  added = green
+  changed = red
   untracked = cyan
 
 [format]
@@ -53,4 +50,4 @@
 [push]
   default = simple
 [github]
-	user = filipebarcos
+	user = scnfilho
