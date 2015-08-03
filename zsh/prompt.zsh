@@ -35,15 +35,17 @@ git_prompt_info () {
 }
 
 unpushed () {
-  $git cherry -v @{upstream} 2>/dev/null
+  $git cherry -v @{upstream} 2>/dev/null | wc -l
 }
 
 need_push () {
-  if [[ $(unpushed) == "" ]]
+  unicode_arrow_up="\xE2\x86\x91"
+  count=$(unpushed)
+  if [[ $count == "0" ]]
   then
-    echo " "
+    echo ""
   else
-    echo ": %{$fg_bold[magenta]%}unpushed%{$reset_color%} "
+    echo "%{$fg_bold[white]%}$unicode_arrow_up$count%{$reset_color%} "
   fi
 }
 
