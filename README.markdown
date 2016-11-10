@@ -1,5 +1,6 @@
-# ~~holman does dotfiles~~
-# Filipe Costa uses holman's dotfiles :)
+# Dotfiles
+
+This is based on filipebarcos' dotfiles, which are based on holman's
 
 ## install
 
