@@ -15,10 +15,6 @@ nnoremap <leader><c-u> viwUe
 nnoremap <leader>ev :tabnew $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
-nnoremap <leader>rmd yiw:!ag "def <c-r>""<cr>
-nnoremap <leader>rMd yiw:!ag "module <c-r>""<cr>
-nnoremap <leader>rcd yiw:!ag "class <c-r>""<cr>
-
 nnoremap H 0
 nnoremap L $
 vnoremap <leader>y "+y
