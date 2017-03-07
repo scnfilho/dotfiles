@@ -24,6 +24,11 @@ vnoremap <leader>y "+y
 vnoremap <leader>p "+p
 inoremap jk <esc>
 
+silent! map <F2> :NERDTreeFind<CR>
+
+let g:NERDTreeMapActivateNode="<F2>"
+let g:NERDTreeMapPreview="<F3>"
+
 iabbrev funciton function
 iabbrev edn end
 
