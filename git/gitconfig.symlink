@@ -18,7 +18,7 @@
   wtf     = !$ZSH/bin/git-wtf
   rank-contributers = !$ZSH/bin/git-rank-contributers
   count   = !git shortlog -sn
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit
   commit-files = diff-tree --no-commit-id --name-status -r
 
 [color]
@@ -31,7 +31,7 @@
   untracked = cyan
 
 [format]
-  pretty = format:'%C(red)%h%Creset: %C(cyan)%an%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset'
+  pretty = format:'%C(red)%h%Creset: %C(cyan)%an%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci)%Creset'
 
 [core]
   editor = vim
