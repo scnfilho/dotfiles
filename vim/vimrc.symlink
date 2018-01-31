@@ -8,7 +8,7 @@ set re=1
 
 command! MakeTags !ctags -R --exclude=.git --exclude=node_modules
 
-let &colorcolumn="80,100"
+let &colorcolumn="80"
 highlight ColorColumn ctermbg=black
 
 let mapleader = "-"
@@ -76,6 +76,23 @@ let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_scss_scss_lint_exec='scss-lint'
 let g:syntastic_scss_checkers = ['scss_lint'] " It seems there's a difference in the executable name
 
+" Neomake configs - Linters
+let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_javascript_eslint_maker_exe = $PWD . '/node_modules/.bin/eslint'
+au BufEnter *.js let b:neomake_javascript_eslint_exe = nrun#Which('eslint')
+
+let g:neomake_ruby_enabled_makers = ['rubocop']
+" let g:neomake_scss_scss_lint_exec='scss-lint'
+" let g:neomake_scss_enabled_makers = ['scss_lint'] " It seems there's a difference in the executable name
+autocmd! BufWritePost * Neomake
+
 if executable('ag')
   set grepprg=ag\ --vimgrep
 endif
+
+" CtrlP
+if executable("rg")
+  set grepprg=rg\ --vimgrep
+  let g:ctrlp_user_command='rg --files %s'
+endif
+let g:ctrlp_show_hidden = 1
