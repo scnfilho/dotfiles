@@ -3,10 +3,10 @@ call vundle#begin()
 " Plugin 'gmarik/vundle'
 
 " Plugin 'rking/ag.vim'
-" Plugin 'ctrlp.vim'
+Plugin 'ctrlp.vim'
 " Plugin 'JazzCore/ctrlp-cmatcher'
 Plugin 'elixir-lang/vim-elixir'
-Plugin 'scrooloose/syntastic'
+" Plugin 'scrooloose/syntastic'
 " Plugin 'wesgibbs/vim-irblack'
 Plugin 'scrooloose/nerdtree'
 " Plugin 'kchmck/vim-coffee-script'
@@ -31,5 +31,8 @@ Plugin 'scrooloose/nerdtree'
 " Plugin 'ecomba/vim-ruby-refactoring'
 " Plugin 'tmhedberg/matchit'
 " Plugin 'rust-lang/rust.vim'
+Plugin 'jremmen/vim-ripgrep'
+Plugin 'neomake/neomake'
+Plugin 'jaawerth/nrun.vim'
 
 call vundle#end()
